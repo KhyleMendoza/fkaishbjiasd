@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container" id="container">
+        <img src="img/logo.png" alt="Logo" class="logo">
+        <div class="form-container sign-up-container">
+            <form action="#">
+                <h1>Create Account</h1>
+                <input type="text" placeholder="Name" required/>
+                <input type="email" placeholder="Email" required/>
+                <input type="password" placeholder="Password" required/>
+                <button>Register</button>
+                <a href="#" id="overlayLeft2">Don't have an account?</a>
+            </form>
+        </div>
+        <div class="form-container sign-in-container">
+            <form action="#">
+                <h1>Login</h1>
+                <input type="email" placeholder="Email" required/>
+                <input type="password" placeholder="Password" required/>
+                <button>Login</button>
+                <a href="#" id="overlayRight2">Already have an account?</a>
+            </form>
+            
+        </div>
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left" id="overlayLeft">
+                    <img class="wimg" src="img/bg.jpg">
+                </div>
+                <div class="overlay-panel overlay-right" id="overlayRight">
+                    <img class="wimg" src="img/loginbg.jpg">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

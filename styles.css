@@ -9,6 +9,7 @@ body {
     justify-content: center;
     align-items: center;
     font-family: Arial, sans-serif;
+    overflow-x: hidden;
 }
 
 .logo {
@@ -190,26 +191,33 @@ a#overlayRight2:hover {
 
 
 @media (max-width: 768px) {
-    .overlay-container, .overlay, .overlay-panel {
+    .logo {
+        margin-top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .overlay-container {
         display: none;
     }
 
-    .sign-in-container, .sign-up-container {
+    .form-container {
+        position: relative;
         width: 100%;
+        transition: none;
     }
 
-    .sign-in-container {
-        transform: translateX(0);
+    .sign-in-container, .sign-up-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        opacity: 1;
+        z-index: 1;
     }
 
     .container.right-panel-active .sign-in-container {
-        transform: translateX(-100%);
-    }
-
-    .sign-up-container {
-        transform: translateX(100%);
-        opacity: 1;
-        z-index: 5;
+        transform: translateX(0);
     }
 
     .container.right-panel-active .sign-up-container {
